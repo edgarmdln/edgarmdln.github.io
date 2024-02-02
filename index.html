@@ -1,4 +1,639 @@
 
-<h1> you </h1>
+<body class="page-template-default page page-id-66 logged-in admin-bar no-customize-support wp-custom-logo wp-embed-responsive customizer-styles-applied jetpack-reblog-enabled has-marketing-bar has-marketing-bar-theme-hey">
+		<div id="wpadminbar" class="nojq nojs ltr nav-unification">
+							<a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Aller à la barre d&rsquo;outils</a>
+						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Barre d&rsquo;outils" tabindex="0">
+						<ul id="wp-admin-bar-root-default" class="ab-top-menu">
+			
+		<li id="wp-admin-bar-blog" class="my-sites mb-trackable"><a class="ab-item"  href="https://wordpress.com/sites/pepin35.wordpress.com">Mon site</a>		</li>
+		<li id="wp-admin-bar-jumptotop-button-menu"><a class="ab-item"  href="#"><div id="jumptotop"><span class="noticon noticon-top"></span></div></a>		</li>
+		<li id="wp-admin-bar-newdash" class="mb-trackable"><a class="ab-item"  href="https://wordpress.com/read">Lecteur</a>		</li>		</ul>
+			<ul id="wp-admin-bar-top-secondary" class="ab-top-secondary ab-top-menu">
+			
+		<li id="wp-admin-bar-notes" class="menupop"><a class="ab-item"  href="https://wordpress.com/notifications"><span id="wpnt-notes-unread-count" class="wpnt-loading wpn-read"></span><span class="noticon noticon-bell"></span><span class="ab-text">Notifications</span></a><div id="wpnt-notes-panel2" style="display:none" lang="fr" dir="ltr"><div class="wpnt-notes-panel-header"><span class="wpnt-notes-header"></span><span class="wpnt-notes-panel-link"></span></div></div>		</li>
+		<li id="wp-admin-bar-my-account" class="with-avatar mb-trackable"><a class="ab-item"  href="https://wordpress.com/me/"><img alt='' src='https://0.gravatar.com/avatar/313f59aaef5fb4f0768bbc8757b629ea7d0da66f35dda463db38a26dbd9e30e5?s=32&#038;d=mm&#038;r=G' srcset='https://0.gravatar.com/avatar/313f59aaef5fb4f0768bbc8757b629ea7d0da66f35dda463db38a26dbd9e30e5?s=32&#038;d=mm&#038;r=G 1x, https://0.gravatar.com/avatar/313f59aaef5fb4f0768bbc8757b629ea7d0da66f35dda463db38a26dbd9e30e5?s=48&#038;d=mm&#038;r=G 1.5x, https://0.gravatar.com/avatar/313f59aaef5fb4f0768bbc8757b629ea7d0da66f35dda463db38a26dbd9e30e5?s=64&#038;d=mm&#038;r=G 2x, https://0.gravatar.com/avatar/313f59aaef5fb4f0768bbc8757b629ea7d0da66f35dda463db38a26dbd9e30e5?s=96&#038;d=mm&#038;r=G 3x, https://0.gravatar.com/avatar/313f59aaef5fb4f0768bbc8757b629ea7d0da66f35dda463db38a26dbd9e30e5?s=128&#038;d=mm&#038;r=G 4x' class='avatar avatar-32' height='32' width='32' loading='lazy' decoding='async' /><span class="ab-text">Moi</span></a>		</li>
+		<li id="wp-admin-bar-ab-new-post" class="mb-trackable"><a class="ab-item"  href="https://wordpress.com/post/pepin35.wordpress.com"><span>Écrire</span></a>		</li>		</ul>
+				</div>
+							<a class="screen-reader-shortcut" href="https://pepin35.wordpress.com/wp-login.php?action=logout&#038;_wpnonce=56815ac227">Se déconnecter</a>
+					</div>
+
+	
+<script type="text/javascript">
+/* <![CDATA[ */
+(function() {
+	function init() {
+		document.addEventListener( 'load', function() {
+			// hack to hide the gravatar hovercard
+			document.querySelectorAll( '#wpadminbar img.grav-hashed' ).forEach( function (el) {
+				el.classList.remove( 'grav-hashed' );
+			} );
+		} )
+
+		// debug bar extra
+		window.clickDebugLink = function( parentId, obj ) {
+			if ( ! window.jQuery ) {
+				return;
+			}
+			var $ = window.jQuery;
+
+			$( '#' + parentId ).children( 'div' ).hide();
+
+			document.getElementById( obj.href.substr( obj.href.indexOf( '#' ) + 1 ) ).style.display = 'block';
+			$( obj.href.substr( obj.href.indexOf( '#' ) ) ).show()
+
+			$( obj ).parent().addClass( 'current' ).siblings( 'li' ).removeClass( 'current' );
+
+			return false;
+		};
+	}
+
+	if ( document.readyState !== 'loading' ) {
+		init();
+	} else {
+		document.addEventListener( 'DOMContentLoaded', init );
+	}
+})();
+/* ]]> */
+</script>
+	<div class="wpcom-bubble action-bubble">
+		<div class="bubble-txt"></div>
+	</div>
+	<script type="text/javascript">
+	function hideBubble() {
+		var bubble = document.querySelector( 'div.wpcom-bubble' );
+		if ( ! bubble ) {
+			return;
+		}
+		bubble.parentElement.removeChild( bubble );
+
+		bubble = document.createElement( 'div' );
+		bubble.classList.add( 'wpcom-bubble' );
+		bubble.classList.add( 'action-bubble' );
+		bubble.innerHTML = '<div class="bubble-txt"></div>';
+		document.body.appendChild( bubble );
+	}
+	</script>
+		<script type="text/javascript">
+		(function () {
+			'use strict';
+
+			var isShowing = false;
+
+			document.querySelectorAll( '#wp-admin-bar-jumptotop-button-menu a' ).forEach( function ( el ) {
+				el.addEventListener( 'click', function ( e ) {
+					e.preventDefault();
+					if ( window.CSS && window.CSS.supports && window.CSS.supports( 'scroll-behavior', 'smooth' ) ) {
+						window.scroll( { top: 0, left: 0, behavior: 'smooth' } );
+					} else {
+						window.scroll( 0, 0 );
+					}
+				} );
+			} );
+
+			function hideShowButton() {
+				var jumpToTop = document.querySelector( '#jumptotop' );
+				if ( isShowing ) {
+					jumpToTop.style.transform = 'translateY( 0 )';
+				} else {
+					jumpToTop.style.transform = 'translateY( -50px )';
+				}
+			}
+
+			function hideShowTbJumpToTop() {
+				var total_width = 0;
+				// Calculate total width taken by items minus our button to see if it'll
+				// overlap with other toolbar menus.
+				document.querySelectorAll( '#wp-admin-bar-root-default > li' ).forEach( function( el ) {
+					if ( el.getAttribute( 'id' ) !== 'wp-admin-bar-jumptotop-button-menu' ) {
+						total_width += el.offsetWidth;
+					}
+				} );
+				var menu = document.querySelector( '#wp-admin-bar-jumptotop-button-menu' );
+				if ( ! menu ) {
+					return;
+				}
+
+				if ( menu.offsetLeft - total_width < 10 ) {
+					isShowing = false;
+				} else if ( window.scrollY >= 350 && ! isShowing ) {
+					if ( menu.offsetLeft - total_width < 10 ) {
+						return;
+					}
+					isShowing = true;
+				} else if ( window.scrollY < 1 && isShowing ) {
+					isShowing = false;
+				}
+				hideShowButton();
+			}
+
+			// handle on page load if auto scrolling to a position
+			hideShowTbJumpToTop();
+
+			// Bind to scroll event
+			var jumpToTopTimer = null;
+			window.addEventListener( 'scroll', function() {
+				clearTimeout( jumpToTopTimer );
+				jumpToTopTimer = setTimeout( hideShowTbJumpToTop, 150 );
+			}, { passive: true } );
+		})();
+	</script>
+	
+<div class="wp-site-blocks"><header class="wp-block-template-part">
+<div class="wp-block-group has-global-padding is-content-justification-center is-layout-constrained wp-block-group-is-layout-constrained" style="margin-top:0px;margin-bottom:0px;padding-top:var(--wp--preset--spacing--70);padding-right:0;padding-bottom:var(--wp--preset--spacing--30)">
+<div class="wp-block-group is-content-justification-left is-nowrap is-layout-flex wp-container-core-group-is-layout-1 wp-block-group-is-layout-flex"><div class="is-style-rounded wp-block-site-logo"><a href="https://pepin35.wordpress.com/" class="custom-logo-link" rel="home"><img width="575" height="248" src="https://pepin35.files.wordpress.com/2024/02/logo_corrigee.png" class="custom-logo" alt="pepin" decoding="async" srcset="https://pepin35.files.wordpress.com/2024/02/logo_corrigee.png 550w, https://pepin35.files.wordpress.com/2024/02/logo_corrigee.png?w=150&amp;h=65 150w, https://pepin35.files.wordpress.com/2024/02/logo_corrigee.png?w=300&amp;h=130 300w" sizes="(max-width: 575px) 100vw, 575px" data-attachment-id="54" data-permalink="https://pepin35.wordpress.com/logo_corrigee/" data-orig-file="https://pepin35.files.wordpress.com/2024/02/logo_corrigee.png" data-orig-size="550,238" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="logo_corrigee" data-image-description="" data-image-caption="" data-medium-file="https://pepin35.files.wordpress.com/2024/02/logo_corrigee.png?w=300" data-large-file="https://pepin35.files.wordpress.com/2024/02/logo_corrigee.png?w=550" /></a></div></div>
+</div>
+</header>
+
+
+<div class="wp-block-group is-layout-flow wp-block-group-is-layout-flow" style="margin-top:0px;margin-bottom:0px"><nav class="has-text-color has-primary-color has-background has-background-background-color has-medium-font-size is-responsive items-justified-center wp-block-navigation has-medium-font-size is-horizontal is-content-justification-center is-layout-flex wp-container-core-navigation-is-layout-1 wp-block-navigation-is-layout-flex" aria-label="Navigation" 
+			data-wp-interactive='{"namespace":"core/navigation"}'
+			data-wp-context='{"overlayOpenedBy":[],"type":"overlay","roleAttribute":"","ariaLabel":"Menu"}'
+		data-wp-init="callbacks.initNav" data-wp-class--is-collapsed="context.isCollapsed"><button aria-haspopup="dialog" aria-label="Ouvrir le menu" class="wp-block-navigation__responsive-container-open" 
+				data-wp-on--click="actions.openMenuOnClick"
+				data-wp-on--keydown="actions.handleMenuKeydown"
+			><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="4" y="7.5" width="16" height="1.5" /><rect x="4" y="15" width="16" height="1.5" /></svg></button>
+				<div class="wp-block-navigation__responsive-container " style="" id="modal-2" 
+				data-wp-class--has-modal-open="state.isMenuOpen"
+				data-wp-class--is-menu-open="state.isMenuOpen"
+				data-wp-watch="callbacks.initMenu"
+				data-wp-on--keydown="actions.handleMenuKeydown"
+				data-wp-on--focusout="actions.handleMenuFocusout"
+				tabindex="-1"
+			>
+					<div class="wp-block-navigation__responsive-close" tabindex="-1">
+						<div class="wp-block-navigation__responsive-dialog" 
+				data-wp-bind--aria-modal="state.ariaModal"
+				data-wp-bind--aria-label="state.ariaLabel"
+				data-wp-bind--role="state.roleAttribute"
+			>
+							<button aria-label="Fermer le menu" class="wp-block-navigation__responsive-container-close" 
+				data-wp-on--click="actions.closeMenuOnClick"
+			><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M13 11.8l6.1-6.3-1-1-6.1 6.2-6.1-6.2-1 1 6.1 6.3-6.5 6.7 1 1 6.5-6.6 6.5 6.6 1-1z"></path></svg></button>
+							<div class="wp-block-navigation__responsive-container-content" 
+				data-wp-watch="callbacks.focusFirstElement"
+			 id="modal-2-content">
+								
+<div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-5 wp-block-buttons-is-layout-flex">
+<div class="wp-block-button has-custom-font-size is-style-fill has-medium-font-size"><a class="wp-block-button__link has-background-color has-text-color has-link-color wp-element-button" href="https://pepin35.wordpress.com">Home</a></div>
+
+
+
+<div class="wp-block-button has-custom-font-size is-style-fill has-medium-font-size"><a class="wp-block-button__link has-background-color has-text-color has-link-color wp-element-button" href="https://pepin35.wordpress.com/plagnige-semaine/">Plagigne Semaine</a></div>
+
+
+
+<div class="wp-block-button has-custom-font-size is-style-fill has-medium-font-size"><a class="wp-block-button__link has-background-color has-text-color has-link-color wp-element-button" href="https://pepin35.wordpress.com/todoliste/">To Do Liset</a></div>
+
+
+
+<div class="wp-block-button has-custom-font-size is-style-fill has-medium-font-size"><a class="wp-block-button__link has-background-color has-text-color has-link-color wp-element-button" href="https://pepin35.wordpress.com/mesagerie/">Mesagerie</a></div>
+
+
+
+<div class="wp-block-button has-custom-font-size is-style-fill has-medium-font-size"><a class="wp-block-button__link has-background-color has-text-color has-link-color wp-element-button" href="https://pepin35.wordpress.com/achat/">Achat</a></div>
+
+
+
+<div class="wp-block-button has-custom-font-size is-style-fill has-medium-font-size"><a class="wp-block-button__link has-background-color has-text-color has-link-color wp-element-button" href="https://pepin35.wordpress.com/a-propos/">A propos</a></div>
+</div>
+
+							</div>
+						</div>
+					</div>
+				</div></nav>
+
+
+<div class="wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained"><h2 style="margin-bottom:var(--wp--preset--spacing--70);" class="wp-block-post-title">mesagerie</h2></div>
+
+
+
+<div class="wp-block-group is-layout-flow wp-block-group-is-layout-flow" style="margin-bottom:var(--wp--preset--spacing--80)"><div class="entry-content wp-block-post-content has-global-padding is-layout-constrained wp-block-post-content-is-layout-constrained">
+<p>cette page et en coure de création !!!</p>
+
+
+
+<p>retourner sur le Home : <a href="https://pepin35.wordpress.com">https://pepin35.wordpress.com</a></p>
+</div></div>
+
+
+
+<div class="wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained" style="margin-top:var(--wp--preset--spacing--80);margin-bottom:var(--wp--preset--spacing--80)"></div>
+
+
+
+<figure class="wp-block-image aligncenter size-large"><img loading="lazy" width="1024" height="113" src="https://pepin35.files.wordpress.com/2024/02/design-sans-titre5-1.png?w=1024" alt="" class="wp-image-48" srcset="https://pepin35.files.wordpress.com/2024/02/design-sans-titre5-1.png?w=1024 1024w, https://pepin35.files.wordpress.com/2024/02/design-sans-titre5-1.png?w=2039 2039w, https://pepin35.files.wordpress.com/2024/02/design-sans-titre5-1.png?w=150 150w, https://pepin35.files.wordpress.com/2024/02/design-sans-titre5-1.png?w=300 300w, https://pepin35.files.wordpress.com/2024/02/design-sans-titre5-1.png?w=768 768w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+</div>
+
+
+<footer class="wp-block-template-part">
+<div class="wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained" style="padding-top:var(--wp--preset--spacing--70)">
+	
+	<p class="has-secondary-color has-text-color has-link-color has-small-font-size wp-elements-5e6680f9d18c08eafd7eb873981a1160" style="line-height:1.5"><a href="https://wordpress.com/?ref=footer_blog" rel="nofollow">Propulsé par WordPress.com.</a></p>
+	
+</div>
+
+
+</footer></div>
+<!-- wpcom_wp_footer -->
+	<script type="text/javascript">
+	/* <![CDATA[ */
+	( function() {
+		function init() {
+			var bar = document.querySelector( '#wpadminbar' );
+			if ( ! bar ) {
+				return;
+			}
+			bar.addEventListener( 'click', function( event ) {
+				var img = '//pixel.wp.com/g.gif?v=wpcom-no-pv&x_adminbar=',
+					clicked = false,
+					pageLocation;
+
+				var target = event.target;
+
+				if ( target.getAttribute( 'id' ) ) {
+					clicked = target.getAttribute( 'id' );
+				} else if ( target.parent && target.parent.getAttribute( 'id' ) ) {
+					clicked = target.parent.getAttribute( 'id' );
+				} else if ( target.offsetParent && target.offsetParent.getAttribute( 'id' ) ) {
+					clicked = target.offsetParent.getAttribute( 'id' );
+				}
+				if ( 'string' === typeof clicked ) {
+					if ( clicked.indexOf( 'wp-admin-bar-blog-' ) > -1 ) {
+						var suffix = clicked.slice( -2 ),
+							valid = [ '-d', '-n', '-s', '-c', '-v' ];
+						if ( 'wp-admin-bar-blog-stats' !== clicked ) {
+							clicked = 'wp-admin-bar-my-sites';
+							if ( -1 !== valid.indexOf( suffix ) ) {
+								clicked += suffix;
+							}
+						}
+					} else if ( clicked.indexOf( 'wp-admin-bar-theme-' ) > -1 ) {
+						clicked = 'wp-admin-bar-theme';
+					} else if ( clicked.indexOf( 'shortlink' ) > -1 ) {
+						clicked = 'wp-admin-bar-shortlink';
+					}
+				}
+
+				if ( 'string' == typeof clicked && -1 !== [
+					// Blog
+					'wp-admin-bar-blog',
+					'wp-admin-bar-dashboard-top',
+					'wp-admin-bar-blog-stats',
+					'wp-admin-bar-comments',
+					'wp-admin-bar-edit',
+					'wp-admin-bar-privacy',
+					'wp-admin-bar-priv-exp',
+					'wp-admin-bar-new-post',
+					'wp-admin-bar-edit-post',
+					'wp-admin-bar-new-page',
+					'wp-admin-bar-edit-page',
+					'wp-admin-bar-new-attachment',
+					'wp-admin-bar-edit-attachment',
+					'wp-admin-bar-customize',
+					'wp-admin-bar-widgets',
+					'wp-admin-bar-shortlink',
+					'wp-admin-bar-theme',
+					'wp-admin-bar-wpcom_report_url',
+
+					// Newdash
+					'wp-admin-bar-newdash',
+					'wp-admin-bar-following',
+					'wp-admin-bar-discover-freshly-pressed',
+					'wp-admin-bar-discover-recommended-blogs',
+					'wp-admin-bar-discover-find-friends',
+					'wp-admin-bar-my-activity-my-comments',
+					'wp-admin-bar-my-activity-my-likes',
+
+					// Social
+					'admin-bar-follow-link',
+					'wp-admin-bar-follow',
+					'wp-admin-bar-stats',
+					'wp-admin-bar-store_link',
+
+					// New post
+					'wp-admin-bar-ab-new-post',
+
+					// My account
+					'wp-admin-bar-my-account',
+					'wp-admin-bar-user-info',
+					'wp-admin-bar-user-actions',
+					'wp-admin-bar-find-friends',
+					'wp-admin-bar-manage-blogs',
+					'wp-admin-bar-help',
+					'wp-admin-bar-logout',
+					'wp-admin-bar-my-sites',
+					'wp-admin-bar-my-sites-d',
+					'wp-admin-bar-my-sites-n',
+					'wp-admin-bar-my-sites-s',
+					'wp-admin-bar-my-sites-c',
+					'wp-admin-bar-my-sites-v',
+					'q'
+				].indexOf(clicked) ) {
+					clicked = clicked.replace( 'wp-admin-bar-', '' ).replace( 'admin-bar-', '' ).replace( 'adminbar-', '' );
+					if ( document.body.classList.contains( 'single' ) ) {
+						pageLocation = 'single';
+					} else if ( document.body.classList.contains( 'archive' ) ) {
+						pageLocation = 'archive';
+					} else if ( document.body.classList.contains( 'home' ) ) {
+						pageLocation = 'home';
+					} else if ( document.body.classList.contains( 'wp-admin' ) ) {
+						pageLocation = 'wp-admin';
+					} else if ( document.body.classList.contains( 'search' ) ) {
+						pageLocation = 'search';
+					} else if ( document.body.classList.contains( 'error404' ) ) {
+						pageLocation = 'error404';
+					} else {
+						pageLocation = 'unknown-location';
+					}
+
+					new Image().src = img + clicked + '_' + pageLocation + '&rand=' + Math.random();
+				}
+			} );
+		}
+
+		if ( document.readyState !== 'loading' ) {
+			init();
+		} else {
+			document.addEventListener( 'DOMContentLoaded', init );
+		}
+	} )();
+	/* ]]> */
+	</script>
+	<script src="//0.gravatar.com/js/hovercards/hovercards.min.js?ver=202405131f6b765e798866d728f95661b78bbf269c86482ffff0fa8c08e18a1a65cc89" id="grofiles-cards-js"></script>
+<script id="wpgroho-js-extra">
+var WPGroHo = {"my_hash":"06775c34e746532ad27a9a89b7b30733"};
+</script>
+<script crossorigin='anonymous' type='text/javascript'  src='https://s0.wp.com/wp-content/mu-plugins/gravatar-hovercards/wpgroho.js?m=1610363240i'></script>
+
+	<script>
+		// Initialize and attach hovercards to all gravatars
+		( function() {
+			function init() {
+				if ( typeof Gravatar === 'undefined' ) {
+					return;
+				}
+
+				if ( typeof Gravatar.init !== 'function' ) {
+					return;
+				}
+
+				Gravatar.profile_cb = function ( hash, id ) {
+					WPGroHo.syncProfileData( hash, id );
+				};
+
+				Gravatar.my_hash = WPGroHo.my_hash;
+				Gravatar.init(
+					'body',
+					'#wp-admin-bar-my-account',
+					{
+						i18n: {
+							'Edit your profile': 'Modifier votre profil',
+							'View profile': 'View profile',
+							'Sorry, we are unable to load this Gravatar profile.': 'Sorry, we are unable to load this Gravatar profile.',
+							'Sorry, we are unable to load this Gravatar profile. Please check your internet connection.': 'Sorry, we are unable to load this Gravatar profile. Please check your internet connection.',
+						},
+					}
+				);
+			}
+
+			if ( document.readyState !== 'loading' ) {
+				init();
+			} else {
+				document.addEventListener( 'DOMContentLoaded', init );
+			}
+		} )();
+	</script>
+
+		<div style="display:none">
+	<div class="grofile-hash-map-06775c34e746532ad27a9a89b7b30733">
+	</div>
+	</div>
+	<div id="actionbar" style="display: none;"
+			class="actnbr-pub-hey actnbr-has-customize actnbr-has-edit">
+		<ul>
+								<li class="actnbr-btn actnbr-customize">
+						<a href="https://pepin35.wordpress.com/wp-admin/site-editor.php?postType=wp_template&#038;postId=pub/hey//page">
+							<svg class="gridicon gridicons-customize" height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M2 6c0-1.505.78-3.08 2-4 0 .845.69 2 2 2 1.657 0 3 1.343 3 3 0 .386-.08.752-.212 1.09.74.594 1.476 1.19 2.19 1.81L8.9 11.98c-.62-.716-1.214-1.454-1.807-2.192C6.753 9.92 6.387 10 6 10c-2.21 0-4-1.79-4-4zm12.152 6.848l1.34-1.34c.607.304 1.283.492 2.008.492 2.485 0 4.5-2.015 4.5-4.5 0-.725-.188-1.4-.493-2.007L18 9l-2-2 3.507-3.507C18.9 3.188 18.225 3 17.5 3 15.015 3 13 5.015 13 7.5c0 .725.188 1.4.493 2.007L3 20l2 2 6.848-6.848c1.885 1.928 3.874 3.753 5.977 5.45l1.425 1.148 1.5-1.5-1.15-1.425c-1.695-2.103-3.52-4.092-5.448-5.977z"/></g></svg>							<span>Modifier le site</span>
+						</a>
+					</li>
+									<li class="actnbr-btn actnbr-edit">
+						<a href="https://wordpress.com/page/pepin35.wordpress.com/66">
+							<svg class="gridicon gridicons-pencil" height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M13 6l5 5-9.507 9.507c-.686-.686-.69-1.794-.012-2.485l-.002-.003c-.69.676-1.8.673-2.485-.013-.677-.677-.686-1.762-.036-2.455l-.008-.008c-.694.65-1.78.64-2.456-.036L13 6zm7.586-.414l-2.172-2.172c-.78-.78-2.047-.78-2.828 0L14 5l5 5 1.586-1.586c.78-.78.78-2.047 0-2.828zM3 18v3h3c0-1.657-1.343-3-3-3z"/></g></svg>							<span>Modifier</span>
+						</a>
+					</li>
+					<li class="actnbr-btn actnbr-stats">
+						<a href="https://wordpress.com/stats/post/66/pepin35.wordpress.com">
+							<svg class="gridicon gridicons-stats-alt" height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M21 21H3v-2h18v2zM8 10H4v7h4v-7zm6-7h-4v14h4V3zm6 3h-4v11h4V6z"/></g></svg>							<span>Statistiques</span>
+						</a>
+					</li>
+									<li class="actnbr-btn actnbr-hidden no-display" onclick="javascript:__tcfapi( 'showUi' );">
+						<a class="actnbr-action actnbr-actn-privacy" href="#">
+							<svg class="gridicon gridicons-info-outline" height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M13 9h-2V7h2v2zm0 2h-2v6h2v-6zm-1-7c-4.41 0-8 3.59-8 8s3.59 8 8 8 8-3.59 8-8-3.59-8-8-8m0-2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2z"/></g></svg>							<span>Confidentialité						</span>
+						</a>
+					</li>
+							<li class="actnbr-ellipsis actnbr-hidden">
+				<svg class="gridicon gridicons-ellipsis" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M7 12c0 1.104-.896 2-2 2s-2-.896-2-2 .896-2 2-2 2 .896 2 2zm12-2c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm-7 0c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2z"/></g></svg>				<div class="actnbr-popover tip tip-top-left actnbr-more">
+					<div class="tip-arrow"></div>
+					<div class="tip-inner">
+						<ul>
+									<li class="actnbr-sitename">
+			<a href="https://pepin35.wordpress.com">
+				<img alt='' src='https://pepin35.files.wordpress.com/2024/02/brown-aesthetic-vision-board-autumn-photo-collage-desktop-wallpaper-1.png?w=50' srcset='https://pepin35.files.wordpress.com/2024/02/brown-aesthetic-vision-board-autumn-photo-collage-desktop-wallpaper-1.png?w=50 1x, https://pepin35.files.wordpress.com/2024/02/brown-aesthetic-vision-board-autumn-photo-collage-desktop-wallpaper-1.png?w=75 1.5x, https://pepin35.files.wordpress.com/2024/02/brown-aesthetic-vision-board-autumn-photo-collage-desktop-wallpaper-1.png?w=100 2x, https://pepin35.files.wordpress.com/2024/02/brown-aesthetic-vision-board-autumn-photo-collage-desktop-wallpaper-1.png?w=150 3x, https://pepin35.files.wordpress.com/2024/02/brown-aesthetic-vision-board-autumn-photo-collage-desktop-wallpaper-1.png?w=200 4x' class='avatar avatar-50' height='50' width='50' />				pepin			</a>
+		</li>
+								<li class="actnbr-folded-customize">
+								<a href="https://pepin35.wordpress.com/wp-admin/site-editor.php?postType=wp_template&#038;postId=pub/hey//page">
+									<svg class="gridicon gridicons-customize" height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M2 6c0-1.505.78-3.08 2-4 0 .845.69 2 2 2 1.657 0 3 1.343 3 3 0 .386-.08.752-.212 1.09.74.594 1.476 1.19 2.19 1.81L8.9 11.98c-.62-.716-1.214-1.454-1.807-2.192C6.753 9.92 6.387 10 6 10c-2.21 0-4-1.79-4-4zm12.152 6.848l1.34-1.34c.607.304 1.283.492 2.008.492 2.485 0 4.5-2.015 4.5-4.5 0-.725-.188-1.4-.493-2.007L18 9l-2-2 3.507-3.507C18.9 3.188 18.225 3 17.5 3 15.015 3 13 5.015 13 7.5c0 .725.188 1.4.493 2.007L3 20l2 2 6.848-6.848c1.885 1.928 3.874 3.753 5.977 5.45l1.425 1.148 1.5-1.5-1.15-1.425c-1.695-2.103-3.52-4.092-5.448-5.977z"/></g></svg>									<span>Modifier le site</span>
+								</a>
+							</li>
+																<li class="actnbr-folded-follow">
+												<a class="actnbr-action actnbr-actn-follow  no-display" href="">
+			<svg class="gridicon" height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path clip-rule="evenodd" d="m4 4.5h12v6.5h1.5v-6.5-1.5h-1.5-12-1.5v1.5 10.5c0 1.1046.89543 2 2 2h7v-1.5h-7c-.27614 0-.5-.2239-.5-.5zm10.5 2h-9v1.5h9zm-5 3h-4v1.5h4zm3.5 1.5h-1v1h1zm-1-1.5h-1.5v1.5 1 1.5h1.5 1 1.5v-1.5-1-1.5h-1.5zm-2.5 2.5h-4v1.5h4zm6.5 1.25h1.5v2.25h2.25v1.5h-2.25v2.25h-1.5v-2.25h-2.25v-1.5h2.25z"  fill-rule="evenodd"></path></svg>
+			<span>Souscrire</span>
+		</a>
+		<a class="actnbr-action actnbr-actn-following " href="">
+			<svg class="gridicon" height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill-rule="evenodd" clip-rule="evenodd" d="M16 4.5H4V15C4 15.2761 4.22386 15.5 4.5 15.5H11.5V17H4.5C3.39543 17 2.5 16.1046 2.5 15V4.5V3H4H16H17.5V4.5V12.5H16V4.5ZM5.5 6.5H14.5V8H5.5V6.5ZM5.5 9.5H9.5V11H5.5V9.5ZM12 11H13V12H12V11ZM10.5 9.5H12H13H14.5V11V12V13.5H13H12H10.5V12V11V9.5ZM5.5 12H9.5V13.5H5.5V12Z" fill="#008A20"></path><path class="following-icon-tick" d="M13.5 16L15.5 18L19 14.5" stroke="#008A20" stroke-width="1.5"></path></svg>
+			<span>Abonné</span>
+		</a>
+										</li>
+																	<li class="actnbr-theme">
+										<a href="https://wordpress.com/theme/hey/">Obtenir le thème: Hey</a>
+									</li>
+																	<li class="actnbr-shortlink"><a href="https://wp.me/PfubwA-14">Copier shortlink</a></li>
+																	<li class="actnbr-reader">
+										<a href="https://wordpress.com/read/blogs/228839184/posts/66">
+											Voir l’article dans le Lecteur										</a>
+									</li>
+																	<li class="actnbr-follows">
+										<a href="https://wordpress.com/following/manage?s=pepin35.wordpress.com">
+											Gérer les abonnements										</a>
+									</li>
+																		<li class="actnbr-fold"><a href="">Réduire cette barre</a></li>
+															</ul>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	
+<script>
+window.addEventListener( "load", function( event ) {
+	var link = document.createElement( "link" );
+	link.href = "https://s0.wp.com/wp-content/mu-plugins/actionbar/actionbar.css?v=20240115";
+	link.type = "text/css";
+	link.rel = "stylesheet";
+	document.head.appendChild( link );
+
+	var script = document.createElement( "script" );
+	script.src = "https://s0.wp.com/wp-content/mu-plugins/actionbar/actionbar.js?v=20231122";
+	script.defer = true;
+	document.body.appendChild( script );
+} );
+</script>
+
+	<script id="comment-like-js-extra">
+var comment_like_text = {"loading":"chargement\u2026","swipeUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/comment-likes\/js\/lib\/swipe.js?ver=20131008"};
+</script>
+<script crossorigin='anonymous' type='text/javascript'  src='https://s0.wp.com/_static/??-eJyNjUsOwjAMBS+Eaz4ChQXiLGkagdPYqeIErk8KCwoSEjvLb0aD9wlIXKyDVwyK13TzmaR4KRC0Y5Iu6Aq/KDu0AXqbl4BLTw25whTrhWTBtd0lhrf322kcz/VI4yv28fgrxlaLz+2Ckq0bZ+nMp83BbPfmuFub8AAcm1og'></script>
+<script id="wp-block-template-skip-link-js-after">
+	( function() {
+		var skipLinkTarget = document.querySelector( 'main' ),
+			sibling,
+			skipLinkTargetID,
+			skipLink;
+
+		// Early exit if a skip-link target can't be located.
+		if ( ! skipLinkTarget ) {
+			return;
+		}
+
+		/*
+		 * Get the site wrapper.
+		 * The skip-link will be injected in the beginning of it.
+		 */
+		sibling = document.querySelector( '.wp-site-blocks' );
+
+		// Early exit if the root element was not found.
+		if ( ! sibling ) {
+			return;
+		}
+
+		// Get the skip-link target's ID, and generate one if it doesn't exist.
+		skipLinkTargetID = skipLinkTarget.id;
+		if ( ! skipLinkTargetID ) {
+			skipLinkTargetID = 'wp--skip-link--target';
+			skipLinkTarget.id = skipLinkTargetID;
+		}
+
+		// Create the skip link.
+		skipLink = document.createElement( 'a' );
+		skipLink.classList.add( 'skip-link', 'screen-reader-text' );
+		skipLink.href = '#' + skipLinkTargetID;
+		skipLink.innerHTML = 'Aller au contenu principal';
+
+		// Inject the skip link.
+		sibling.parentElement.insertBefore( skipLink, sibling );
+	}() );
+	
+</script>
+
+	<script type="text/javascript">
+		(function () {
+			var wpcom_reblog = {
+				source: 'toolbar',
+
+				toggle_reblog_box_flair: function (obj_id, post_id) {
+
+					// Go to site selector. This will redirect to their blog if they only have one.
+					const postEndpoint = `https://wordpress.com/post`;
+
+					// Ideally we would use the permalink here, but fortunately this will be replaced with the 
+					// post permalink in the editor.
+					const originalURL = `${ document.location.href }?page_id=${ post_id }`; 
+					
+					const url =
+						postEndpoint +
+						'?url=' +
+						encodeURIComponent( originalURL ) +
+						'&is_post_share=true' +
+						'&v=5';
+
+					const redirect = function () {
+						if (
+							! window.open( url, '_blank' )
+						) {
+							location.href = url;
+						}
+					};
+
+					if ( /Firefox/.test( navigator.userAgent ) ) {
+						setTimeout( redirect, 0 );
+					} else {
+						redirect();
+					}
+				},
+			};
+
+			window.wpcom_reblog = wpcom_reblog;
+		})();
+	</script>
+<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script><script src="//stats.wp.com/w.js?67" defer></script> <script type="text/javascript">
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['identifyUser', 246011712, 'edgarmadnes12']);
+_tkq.push(['storeContext', {'blog_id':'228839184','blog_tz':'1','user_lang':'fr','blog_lang':'fr'}]);
+_stq.push(['view', {'blog':'228839184','v':'wpcom','tz':'1','user':'1','user_id':'246011712','post':'66','subd':'pepin35'}]);
+_stq.push(['extra', {'crypt':'UE40eW5QN0p8M2Y/RE1mJVY3bm9aR3VCbS9mWm1pRyZuJS1LX1t5QmRXZzE3RC9rQWZHK1FjbDltdWdaMVFFZTcxUGVHLWR0WTJoQW5kZWxNT250TW5bYTdZZ0smdExdQk9HUUFaYlsxMFl2SGJSci5YLj82RGJiendKLFZOaVVGS1k0akhEREVDS1F0RnQlQUZPaElQeU1COF9mSTN5P0I9dywwb3RJWGJmTG95L1ZpLDAxMVdCWUMvUG4wbkQ/JWZacF1tY0R2N25CSHhPSDdEXThTRyxIaV0mX2ZaViZqbWQ2RVhKaw=='}]);
+</script>
+<noscript><img src="https://pixel.wp.com/b.gif?v=noscript" style="height:1px;width:1px;overflow:hidden;position:absolute;bottom:1px;" alt="" /></noscript>
+<div id="marketingbar" class="marketing-bar noskim  "><div class="marketing-bar-text">Mettez à niveau votre plan pour supprimer la bannière et débloquer d’autres fonctionnalités, à partir de 4 €/mois</div><a class="marketing-bar-button" href="https://wordpress.com/plans/pepin35.wordpress.com/?ref=marketing_bar&#038;utm_source=marketing-bar">Mise à niveau</a><a class="marketing-bar-link" tabindex="-1" aria-label="Créer un nouveau site sur WordPress.com" href="https://wordpress.com/plans/pepin35.wordpress.com/?ref=marketing_bar&#038;utm_source=marketing-bar"></a></div>		<script type="text/javascript">
+			window._tkq = window._tkq || [];
+
+			window._tkq.push( [ 'recordEvent', 'wpcom_marketing_bar_impression', {"is_current_user_blog_owner":true} ] );
+
+			document.querySelectorAll( '#marketingbar > a' ).forEach( link => {
+				link.addEventListener( 'click', ( e ) => {
+					window._tkq.push( [ 'recordEvent', 'wpcom_marketing_bar_cta_click', {"is_current_user_blog_owner":true} ] );
+				} );
+			});
+		</script><script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script></body>
+</html>
+
 
 
